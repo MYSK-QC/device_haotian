@@ -6,6 +6,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),haotian)
+ifeq ($(TARGET_DEVICE),mimi)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
