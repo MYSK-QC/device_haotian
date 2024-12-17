@@ -4,23 +4,23 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/aurora
+DEVICE_PATH := device/xiaomi/haotian
 
 # Inherit from device.mk configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := aurora
+PRODUCT_RELEASE_NAME := haotiam
 
 ## Device identifier
 PRODUCT_DEVICE := aurora
-PRODUCT_NAME := twrp_aurora
+PRODUCT_NAME := twrp_haotian
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Xiaomi14Ultra
+PRODUCT_MODEL := Xiaomi15pro
 PRODUCT_MANUFACTURER := Xiaomi
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := aurora
+TARGET_OTA_ASSERT_DEVICE := haotian
 
 # Theme
 TW_STATUS_ICONS_ALIGN := center
