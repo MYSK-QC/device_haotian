@@ -1,6 +1,6 @@
 <!--
     Input:
-        device/xiaomi/mivendor/manifest_pineapple.xml
+        device/xiaomi/mivendor/manifest_sun.xml
         vendor/xiaomi/proprietary/slm/port/src/manifest.xml
         vendor/xiaomi/proprietary/miwillp/port/src/manifest.xml
         vendor/xiaomi/proprietary/minet/port/src/manifest.xml
