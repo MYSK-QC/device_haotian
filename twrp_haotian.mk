@@ -10,10 +10,10 @@ DEVICE_PATH := device/xiaomi/haotian
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := haotiam
+PRODUCT_RELEASE_NAME := haotian
 
 ## Device identifier
-PRODUCT_DEVICE := aurora
+PRODUCT_DEVICE := haotian
 PRODUCT_NAME := twrp_haotian
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi15pro
