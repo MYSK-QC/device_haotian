@@ -10,19 +10,19 @@ DEVICE_PATH := device/xiaomi/haotian
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := haotiam
+PRODUCT_RELEASE_NAME := haotian
 
 ## Device identifier
-PRODUCT_DEVICE := aurora
+PRODUCT_DEVICE := haotian
 PRODUCT_NAME := twrp_haotian
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Xiaomi15pro
+PRODUCT_MODEL := xiaomi 15 pro
 PRODUCT_MANUFACTURER := Xiaomi
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := haotian
+TARGET_OTA_ASSERT_DEVICE := $(PRODUCT_RELEASE_NAME)
 
 # Theme
 TW_STATUS_ICONS_ALIGN := center
-TW_Y_OFFSET := 99
-TW_H_OFFSET := -99
+TW_Y_OFFSET := 105
+TW_H_OFFSET := -105
