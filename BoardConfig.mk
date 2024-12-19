@@ -136,7 +136,7 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     vendor.display.config@1.0 \
     vendor.display.config@2.0 \
     libdebuggerd_client
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
 # Theme
 TW_Y_OFFSET := 124
