@@ -1,2 +1,2 @@
-这只是一个测试
-this is test！！！
+### TWRP device tree for Xiaomi 15  TEST
+
