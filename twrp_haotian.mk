@@ -4,19 +4,19 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/dada
+DEVICE_PATH := device/xiaomi/haotian
 
 # Inherit from device.mk configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := dada
+PRODUCT_RELEASE_NAME := haotian
 
 ## Device identifier
-PRODUCT_DEVICE := dada
-PRODUCT_NAME := twrp_dada
+PRODUCT_DEVICE := haotian
+PRODUCT_NAME := twrp_haotian
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := 24129PN74C
+PRODUCT_MODEL := 2410DPN6CC
 PRODUCT_MANUFACTURER := Xiaomi
 
 # Assert
