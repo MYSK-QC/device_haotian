@@ -16,9 +16,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <vendor-ndk>
-        <version>35</version>
-    </vendor-ndk>
     <system-sdk>
         <version>35</version>
     </system-sdk>
