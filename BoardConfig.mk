@@ -25,9 +25,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Platform
-TARGET_BOARD_PLATFORM := xiaomi_sm8750
+TARGET_BOARD_PLATFORM := xiaomi_sun
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno830
-QCOM_BOARD_PLATFORMS += xiaomi_sm8750
+QCOM_BOARD_PLATFORMS += xiaomi_sun
 
 # Kernel
 TARGET_KERNEL_ARCH            := arm64
