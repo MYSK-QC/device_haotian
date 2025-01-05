@@ -25,6 +25,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+on init
+    start boot-hal-1-2
+
 on early-fs
     write /proc/sys/walt/sched_lib_name "recovery,magiskboot,Updater,updater,update_engine_sideload"
     write /proc/sys/walt/sched_lib_mask_force 255
@@ -37,15 +40,19 @@ on fs
     chown system drmrpc /dev/qseecom
     chmod 0664 /dev/ion
     chown system system /dev/ion
+    mkdir /mnt/vendor 0775 shell system
+    mkdir /mnt/vendor/persist 0775 shell system
+    mkdir /tmp/persist 0775 shell system
+    mount none /tmp/persist /mnt/vendor/persist bind rec
     install_keyring
-
-on init
-    start boot-hal-1-2
 
 on boot
     setprop sys.usb.config adb
 
 on property:twrp.modules.loaded=true
+    # Mount debugfs
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
     # Mount firmware
     mkdir /firmware
     mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro
@@ -53,15 +60,15 @@ on property:twrp.modules.loaded=true
     wait /sys/kernel/boot_adsp/boot
     write /sys/kernel/boot_adsp/boot 1
     wait /sys/class/power_supply/battery
-    start health-hal-2-1
     start touch_report
-    start vibratorfeature-hal-service
-    stop vendor.qseecomd
+    start health-hal-2-1
     start vendor.qseecomd
     umount /firmware
 
 on property:vendor.sys.listeners.registered=true
-    start vendor.secure_element
+    start vibratorfeature-hal-service
     start vendor.gatekeeper_default
     start vendor.keymint-qti
-    start vendor.weaver_thales
+    start vendor.weaver_hal_service
+    start vendor.secure_element
+    #start vendor.keymint-strongbox
