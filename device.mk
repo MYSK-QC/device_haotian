@@ -19,22 +19,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Configure twrp common.mk
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-PRODUCT_PACKAGES += \
-    bootctrl.xiaomi_sm8750.recovery \
-    android.hardware.boot@1.2-impl-qti.recovery
-
-# SHIPPING API
-PRODUCT_SHIPPING_API_LEVEL := 31
-
-# VNDK API
-PRODUCT_TARGET_VNDK_VERSION := 34 # VNDK is deprecated in sdk35
+# API
+BOARD_SHIPPING_API_LEVEL := 34
+PRODUCT_SHIPPING_API_LEVEL := 34
+PRODUCT_TARGET_VNDK_VERSION := 34
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Enable Fuse Passthrough
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.fuse.passthrough.enable=true
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
-
-TWRP_REQUIRED_MODULES += \
-    miui_prebuilt
